@@ -53,7 +53,6 @@ class Students extends ObjectModel
             $sql = new DbQuery();
             $sql->select('s.*');
             $sql->from('students', 's');
-            //$sql->where('s.`id_student` = '.(int) $this->id);
             $result = Db::getInstance()->executeS($sql);
             $students = array();
             foreach ($result as $row) {
